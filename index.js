@@ -1,11 +1,9 @@
 /**
  * 
- * @param {number} age 
+ * @param {num} num 
  * @returns {boolean}
  */
-const isAdult = function(age=0, ADULT=18){
-  return age>=ADULT;
+const checkNum = function (num) {
+  return num > 20 && num % 7 === 0;
 }
-const result = isAdult(18, 21);
-console.log(result);
-
+console.log(checkNum(0));
