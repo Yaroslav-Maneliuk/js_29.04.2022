@@ -1,13 +1,16 @@
-let string1 = 'I\'m a teacher';
-console.log(string1, ':', typeof string1);
+const sideSquare = prompt('enter side square' , '10')
+/**
+ * 
+ * @param {number} side 
+ * @returns {null | number}
+ */
+const calcPerimetrSquare = function(side=0){
+  if(side<0){
+    return null;
+  }
+  return side*4;
+}
+console.log(calcPerimetrSquare()) //NaN
+console.log(calcPerimetrSquare(sideSquare))  //40
+console.log(calcPerimetrSquare(8))  //32
 
-let age = '32';
-
-let num = 8;
-console.log(num, ':', typeof num);
-
-let undef = 8;
-console.log(undef, ':', typeof undef);
-
-let nullValue = null;
-console.log(nullValue, ':', typeof nullValue);
