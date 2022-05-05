@@ -4,20 +4,22 @@
 //[6,7,8) - summer
 //[9-10-11) - autumn
 
-// const numberMonth = '8';
-// if (isNaN(numberMonth) || numberMonth <= 0){
-//   console.log('error')
-// } else if(numberMonth <=2 || numberMonth === 12){
-//   console.log('winter')
-// } else if(numberMonth <=5){
-//   console.log('spring')
-// } else if(numberMonth <=8){
-//   console.log('summer')
-// } else if(numberMonth <=11){
-//   console.log('autumn')
-// } else {
-//   console.log('fail')
-// }
+const numberMonth = '8';
+if (isNaN(numberMonth) || numberMonth <= 0){
+  console.log('error')
+} else if(numberMonth <=2 || numberMonth === 12){
+  console.log('winter')
+} else if(numberMonth <=5){
+  console.log('spring')
+} else if(numberMonth <=8){
+  console.log('summer')
+} else if(numberMonth <=11){
+  console.log('autumn')
+} else if(numberMonth <=12){
+  console.log('winter')
+} else {
+  console.log('fail')
+}
 
 
 // const numberMonth = prompt("Choose number: ");
