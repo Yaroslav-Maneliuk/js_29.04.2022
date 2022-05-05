@@ -7,7 +7,7 @@
 const numberMonth = '8';
 if (isNaN(numberMonth) || numberMonth <= 0){
   console.log('error')
-} else if(numberMonth <=2 || numberMonth === 12){
+} else if(numberMonth <=2){
   console.log('winter')
 } else if(numberMonth <=5){
   console.log('spring')
