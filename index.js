@@ -1,32 +1,40 @@
-// 'use  strict'
+"use strict";
 
-// function User(name, sname, age) {
-//   this.name = name;
-//   this.sname = sname;
-//   this.age = age;
-//   this.getFullName = function () {
-//     return this.name + ' ' + this.sname;
-//   };
-// };
-// const user1 = new User('Dmytro', 'Dmytrov', 20);
-// console.log(user1);
-// const user2 = new User('Ivan', 'Ivanov', 21);
-// console.log(user2);
-// const user3 = new User('Denis', 'Denisov', 22);
-// console.log(user3);
+function Auto(marka = "bmw", maxSpeed = 450) {
+  this.name = marka;
+  this.maxSpeed = maxSpeed;
+  this.speed = 0;
 
-'use  strict'
-
-function Country(name, population, area) {
-  this.name = name;
-  this.population = population;
-  this.area = area;
-  this.getDensity = function () {
-    return this.population / this.area;
+  this.accelerate = function (value = 10) {
+    if (value < 0) {
+      return this.speed;
+    }
+    this.speed += value;
+    if (this.speed > this.maxSpeed) {
+      return (this.speed = this.maxSpeed);
+    }
+    return this.speed;
   };
-};
-const country1 = new Country('USA', 331893745, 9833520);
-console.log(country1);
-console.log(country1.getDensity());
+  this.decelerate = function (value = 10) {
+    if (value < 0) {
+      return this.speed;
+    }
+    this.speed -= value;
+    if (this.speed <= 0) {
+      return (this.speed = 0);
+    }
+    return this.speed;
+  };
+  this.stop = function () {
+    return (this.speed = 0);
+  };
+}
 
-
+const auto = new Auto();
+console.log(auto);
+console.log(auto.accelerate(70));
+console.log(auto.accelerate(70));
+console.log(auto.speed);
+console.log(auto.decelerate(20));
+console.log(auto.speed);
+console.log(auto.stop());
