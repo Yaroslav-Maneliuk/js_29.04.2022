@@ -1,14 +1,15 @@
-let count = 0;
-while(true){
-  const userInput = prompt('enter password', '***');
-  count++;
-  alert('try = ' + count);
-  if(count >= MAX_TRY){
-    alert('try end');
-    break;
-  }
-  if(userInput === CORRECT_PASSWORD){
-    alert('welcome');
-    break;
-  }
+'use  strict'
+const dog1 ={
+  name: 'Patrick',
+  isMale:true,
+  say:function(){
+    return 'woof';
+  },
+}
+const dog2 ={
+  name: 'Dory',
+  isMale:false,
+  say:function(){
+    return 'wof';
+  },
 }
